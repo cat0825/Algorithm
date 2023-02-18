@@ -13,11 +13,27 @@ int demo1(vector<int> &v, int target)
             {
                 v[j] = v[j + 1];
             }
+            i--;
+            size--;
         }
-        i--;
-        size--;
     }
     return size;
+}
+
+int demo2(vector<int> &v, int target)
+{ // 双指针
+    int fast = 0;
+    int slow = 0;
+    int size = v.size();
+    for (fast = 0; fast < size; fast++)
+    {
+        if (v[fast] != target)
+        {
+            v[slow] = v[fast];
+            slow++;
+        }
+    }
+    return slow;
 }
 
 int main()
