@@ -5,7 +5,7 @@ using namespace std;
 int demo1(vector<int> &v, int target)
 { // 暴力解法
     int size = v.size();
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < (int)v.size(); i++)
     {
         if (v[i] == target)
         {
